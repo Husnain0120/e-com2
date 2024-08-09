@@ -20,11 +20,10 @@ connectDB();
 
 const app = express();
 
-// app.use(cors({
-//   origin:["https://e-com2-store-amazing-husniaans-projects.vercel.app/"],
-//   methods:["POST","GET","PUT","DELETE"],
-//   credentials:true
-// }))
+app.use(cors({
+  origin:process.env.CORS_ORIGIN,
+  credentials:true
+}))
 
 
 
