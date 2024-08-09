@@ -4,6 +4,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 
+
 // Utiles
 import connectDB from "./config/db.js";
 import userRoutes from "./routes/userRoutes.js";
@@ -20,7 +21,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin:["https://e-com2-store-amazing-husniaans-projects.vercel.app"],
+  origin:["https://e-com2-store-amazing-husniaans-projects.vercel.app/"],
   methods:["POST","GET","PUT","DELETE"],
   credentials:true
 }))
@@ -42,6 +43,11 @@ app.use("/api/orders", orderRoutes);
 app.get("/api/config/paypal", (req, res) => {
   res.send({ clientId: process.env.PAYPAL_CLIENT_ID });
 });
+
+
+///////
+
+/////
 
 const __dirname = path.resolve();
 app.use("/uploads", express.static(path.join(__dirname + "/uploads")));
