@@ -48,6 +48,6 @@ app.get("/api/config/paypal", (req, res) => {
 /////
 
 const __dirname = path.resolve();
-app.use("https://e-com2-6oj4.vercel.app/", express.static(path.join(__dirname + "https://e-com2-6oj4.vercel.app/")));
+app.use("/uploads", express.static(path.join(__dirname + "/uploads")));
 
 app.listen(port, () => console.log(`Server running on port: ${port}`));
