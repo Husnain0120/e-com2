@@ -22,9 +22,9 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin:process.env.CORS_ORIGIN,
-  credentials:true
-}))
+  origin: 'https://e-com2-store.vercel.app', // Change this to your frontend domain
+  credentials: true,
+}));
 
 
 
