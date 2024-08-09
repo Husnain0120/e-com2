@@ -20,7 +20,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin:["e-com2-store-amazing.vercel.app"],
+  origin:["https://e-com2-store-amazing-husniaans-projects.vercel.app"],
   methods:["POST","GET","PUT","DELETE"],
   credentials:true
 }))
