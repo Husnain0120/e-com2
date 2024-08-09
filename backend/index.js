@@ -12,6 +12,7 @@ import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
+import cors from 'cors';
 // import cors from 'cors'
 dotenv.config();
 const port = process.env.PORT || 5000;
@@ -20,11 +21,10 @@ connectDB();
 
 const app = express();
 
-// app.use(cors({
-//   origin:["https://e-com2-store-amazing-husniaans-projects.vercel.app/"],
-//   methods:["POST","GET","PUT","DELETE"],
-//   credentials:true
-// }))
+app.use(cors({
+  origin: 'https://e-com2-frontend.vercel.app', // Frontend URL
+  credentials: true, // If you need to send cookies or authorization headers
+}));
 
 
 
